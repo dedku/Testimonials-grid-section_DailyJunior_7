@@ -32,10 +32,6 @@ body {
     gap: 1rem;
 }
 
-.flow>*:where(:not(:first-child)) {
-    margin-top: 1rem;
-}
-
 .bg-moderate-violet {
     background: $moderate-violet;
 }
@@ -150,6 +146,10 @@ body {
 
     blockquote {
         opacity: 0.7;
+    }
+
+    >*:where(:not(:first-child)) {
+        margin-top: 1rem;
     }
 }
 
