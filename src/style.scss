@@ -27,12 +27,96 @@ body {
     font-family: 'Barlow Semi Condensed', sans-serif;
 }
 
-blockquote::before {
-    content: '\201C';
+// utilities
+.flex {
+    display: flex;
+    gap: 1rem;
 }
 
-blockquote::after {
-    content: '\201D';
+.flow>*:where(:not(:first-child)) {
+    margin-top: 1rem;
+}
+
+.bg-moderate-violet {
+    background: $moderate-violet;
+}
+
+.bg-very-dark-grayish-blue {
+    background: $very-dark-grayish-blue;
+}
+
+.bg-very-dark-blackish-blue {
+    background: $very-dark-blackish-blue;
+}
+
+.bg-white {
+    background: $white;
+}
+
+.text-white {
+    color: $white;
+}
+
+.text-very-dark-grayish-blue {
+    color: $very-dark-grayish-blue;
+}
+
+.border-light-grayish-blue {
+    border: $light-grayish-blue;
+}
+
+// compontens
+.testiminial {
+    padding-block: 2rem;
+    width: min(95%, 70rem);
+    margin-inline: auto;
+}
+
+.testiminial-article {
+    font-size: 500;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 2.5rem 3.75rem 3rem -3rem $light-gray;
+
+    &.quote {
+        background-image: url(../images/bg-pattern-quotation.svg);
+        background-repeat: no-repeat;
+        background-position: top right 10%;
+    }
+
+    img {
+        width: 1.75rem;
+        aspect-ratio: 1;
+        border-radius: 50%;
+    }
+
+    .name {
+        font-size: 0.8125rem;
+        font-weight: 500;
+        line-height: 1;
+    }
+
+    .position {
+        font-size: 0.6875rem;
+        opacity: 0.5;
+    }
+
+    >p:first-of-type {
+        font-size: 1.25rem;
+        line-height: 1.2;
+    }
+
+    blockquote::before {
+        content: '\201C';
+    }
+
+    blockquote::after {
+        content: '\201D';
+    }
+
+    blockquote {
+        opacity: 0.7;
+    }
 }
 
 .attribution {
